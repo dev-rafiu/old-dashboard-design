@@ -16,7 +16,7 @@ const config: Config = {
         foreground: "rgba(var(--foreground),<alpha-value>)",
         "foreground-muted": "rgba(var(--foreground-muted),<alpha-value>)",
 
-        secondary: "rgba(var(secondary),<alpha-value>)",
+        secondary: "rgba(var(--secondary),<alpha-value>)",
 
         "pie-chart-teal": "rgba(var(--pie-chart-teal),<alpha-value>)",
         "pie-chart-pastel-blue":
