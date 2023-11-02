@@ -1,6 +1,10 @@
+import { BarChartComponent } from "../charts/barchat";
+
 function Revenue() {
   return (
-    <div className="bg-gray-400 animate-pulse h-80 shadow-md lg:col-span-3 rounded-md"></div>
+    <div className="bg-background shadow-md lg:col-span-3 rounded-md">
+      <BarChartComponent title="revenue" />
+    </div>
   );
 }
 
