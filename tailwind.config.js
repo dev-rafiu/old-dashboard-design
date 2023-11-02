@@ -10,19 +10,53 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "rgba(var(--background),<alpha-value>)",
-        "backgound-secondary":
-          "rgba(var(--background-secondary,<alpha-value>))",
-
-        foreground: "rgba(var(--foreground),<alpha-value>)",
-        "foreground-muted": "rgba(var(--foreground-muted),<alpha-value>)",
-
-        secondary: "rgba(var(--secondary),<alpha-value>)",
+        "background-custom": "rgba(var(--background-custom),<alpha-value>)",
+        "backgound-secondary-custom":
+          "rgba(var(--background-secondary-custom,<alpha-value>))",
+        "foreground-custom": "rgba(var(--foreground-custom),<alpha-value>)",
+        "foreground-muted-custom":
+          "rgba(var(--foreground-muted-custom),<alpha-value>)",
+        "secondary-custom": "rgba(var(--secondary-custom),<alpha-value>)",
 
         "pie-chart-teal": "rgba(var(--pie-chart-teal),<alpha-value>)",
         "pie-chart-pastel-blue":
           "rgba(var(--pie-chart-pastel-blue),<alpha-value>)",
         "pie-chart-pink": "rgba(var(--pie-chart-pink),<alpha-value>)",
+
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
 
         // light mode
         tremor: {
@@ -114,6 +148,22 @@ module.exports = {
         "tremor-title": ["1.125rem", { lineHeight: "1.75rem" }],
         "tremor-metric": ["1.875rem", { lineHeight: "2.25rem" }],
       },
+
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
     },
   },
   safelist: [
@@ -145,6 +195,6 @@ module.exports = {
         /^(fill-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
     },
   ],
-  plugins: [require("@headlessui/tailwindcss")],
+  plugins: [require("@headlessui/tailwindcss"), require("tailwindcss-animate")],
 };
 // export default config;

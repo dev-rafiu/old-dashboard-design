@@ -5,9 +5,9 @@ import NavLinks from "./nav-links";
 
 export default function SideNav() {
   return (
-    <div className="flex h-full flex-col px-3 py-4 md:px-2">
+    <div className="flex h-full flex-col px-3 py-4 md:px-2 bg-background-custom">
       <Link
-        className="mb-2 flex h-20 items-end justify-start rounded-md bg-secondary p-4"
+        className="mb-2 flex h-20 items-end justify-start rounded-md bg-secondary-custom p-4"
         href="/"
       >
         <div className="w-32 text-white md:w-40">{/* <AcmeLogo /> */}</div>

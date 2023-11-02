@@ -1,7 +1,15 @@
 "use client";
 
-import { BarChart, Card, Title } from "@tremor/react";
 import { useState } from "react";
+import { BarChart, Card, Title } from "@tremor/react";
+
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const chartdata3 = [
   {
@@ -76,9 +84,21 @@ export const BarChartComponent = ({ title }: TBarchart) => {
   return (
     <>
       <Card>
-        <header>
+        <header className="flex items-center justify-between">
           <Title className="capitalize">{title}</Title>
+
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Yearly" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="light">Yearly</SelectItem>
+              <SelectItem value="dark">Monthly</SelectItem>
+              <SelectItem value="system">Weekly</SelectItem>
+            </SelectContent>
+          </Select>
         </header>
+
         <BarChart
           className="mt-6 w-full h-80"
           data={chartdata3}
