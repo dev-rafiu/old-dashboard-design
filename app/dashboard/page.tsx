@@ -13,7 +13,7 @@ import UsersByRevenue from "../ui/dashboard/courier/users-by-revenue";
 
 function Page() {
   return (
-    <section className=" space-y-4 p-5">
+    <section className="space-y-4">
       {/* revenue and riders */}
       <div className="grid grid-cols-1 xl:grid-cols-5 gap-4">
         <Revenue />
