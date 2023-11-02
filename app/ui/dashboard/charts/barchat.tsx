@@ -99,6 +99,10 @@ export const BarChartComponent = ({ title }: TBarchart) => {
           </Select>
         </header>
 
+        <p>
+          <span>2.1%</span> vs <span>last year</span>
+        </p>
+
         <BarChart
           className="mt-6 w-full h-80"
           data={chartdata3}
