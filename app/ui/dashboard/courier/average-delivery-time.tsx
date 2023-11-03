@@ -1,6 +1,10 @@
+import { LineChartComponent } from "../charts/line-chart";
+
 function AverageDeliveryTime() {
   return (
-    <div className="bg-gray-400 animate-pulse h-80 shadow-md rounded"></div>
+    <div className="bg-background-custom shadow-md rounded">
+      <LineChartComponent title="Average Delivery Time" />
+    </div>
   );
 }
 
