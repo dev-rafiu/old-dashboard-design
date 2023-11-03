@@ -21,11 +21,36 @@ function Page() {
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-5 gap-4">
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
-        <InfoCard />
+        <InfoCard
+          title="orders"
+          percentageInfo="12% percent from yesterday"
+          percentageDiff="up"
+          value={1223}
+        />
+        <InfoCard
+          title="completed trips"
+          percentageInfo="12% percent from yesterday"
+          percentageDiff="down"
+          value={2445}
+        />
+        <InfoCard
+          title="total users"
+          percentageInfo="12% percent from yesterday"
+          percentageDiff="up"
+          value={1233}
+        />
+        <InfoCard
+          title="active users"
+          percentageInfo="12% percent from yesterday"
+          percentageDiff="down"
+          value={555}
+        />
+        <InfoCard
+          title="new user"
+          percentageInfo="12% percent from yesterday"
+          percentageDiff="up"
+          value={245}
+        />
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
