@@ -4,42 +4,43 @@ import React from "react";
 const chartdata2 = [
   {
     date: "01",
-    "2022": 45,
-    "2023": 78,
+    "2022": 0,
+    "2023": 10,
   },
   {
     date: "02",
-    "2022": 52,
-    "2023": 71,
+    "2022": 40,
+    "2023": 20,
   },
   {
     date: "03",
-    "2022": 48,
+    "2022": 0,
     "2023": 80,
   },
   {
     date: "04",
-    "2022": 61,
-    "2023": 65,
+    "2022": 60,
+    "2023": 30,
   },
   {
     date: "05",
-    "2022": 55,
+    "2022": 0,
     "2023": 58,
   },
   {
     date: "06",
-    "2022": 67,
-    "2023": 62,
+    "2022": 30,
+    "2023": 20,
   },
 ];
 
-type TLinechart = {
+type Props = {
   title: string;
+  lineType: string;
   //   info: string;
 };
 
-export const LineChartComponent = ({ title }: TLinechart) => {
+export const LineChartComponent = ({ title, lineType }: Props) => {
   //   const [value, setValue] = React.useState(null);
 
   return (
@@ -55,6 +56,7 @@ export const LineChartComponent = ({ title }: TLinechart) => {
           yAxisWidth={30}
           //   onValueChange={(v) => setValue(v)}
           connectNulls={true}
+          curveType={lineType == "monotone" ? "monotone" : "linear"}
         />
       </Card>
       {/* <pre>{JSON.stringify(value)}</pre> */}
