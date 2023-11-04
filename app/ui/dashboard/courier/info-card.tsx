@@ -11,8 +11,8 @@ import { FaArrowTrendDown, FaArrowTrendUp } from "react-icons/fa6";
 
 type Props = {
   title: string;
-  percentageInfo: string;
-  percentageDiff: string;
+  percentageInfo?: string;
+  percentageDiff?: string;
   value: number;
 };
 
@@ -24,24 +24,33 @@ function InfoCard({ title, percentageInfo, percentageDiff, value }: Props) {
         <CardTitle className="capitalize text-base self-start text-foreground-custom/80">
           {title}
         </CardTitle>
-        <span className="flex items-center justify-center p-2 w-8 aspect-square rounded-full bg-secondary-custom/20 text-secondary-custom">
-          <GoArrowUpRight className="" />
-        </span>
+
+        {percentageInfo ? (
+          <span className="flex items-center justify-center p-2 w-8 aspect-square rounded-full bg-secondary-custom/20 text-secondary-custom">
+            <GoArrowUpRight />
+          </span>
+        ) : (
+          <span></span>
+        )}
       </CardHeader>
+
       <CardContent className="p-3">
-        <p className="text-foreground-muted-custom flex gap-2 text-base">
-          {percentageDiff == "up" ? (
-            <span className="text-[rgba(133,237,218,1)] self-start">
-              <FaArrowTrendUp />
-            </span>
-          ) : (
-            <span className="text-[rgba(255,0,48,1)]">
-              <FaArrowTrendDown />
-            </span>
-          )}
-          {percentageInfo}
-        </p>
+        {percentageDiff && (
+          <p className="text-foreground-muted-custom flex gap-2 text-base">
+            {percentageDiff == "up" ? (
+              <span className="text-[rgba(133,237,218,1)] self-start">
+                <FaArrowTrendUp />
+              </span>
+            ) : (
+              <span className="text-[rgba(255,0,48,1)]">
+                <FaArrowTrendDown />
+              </span>
+            )}
+            {percentageInfo}
+          </p>
+        )}
       </CardContent>
+
       <CardFooter className="p-3">
         <p className="text-2xl font-semibold text-foreground-custom">{value}</p>
       </CardFooter>

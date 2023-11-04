@@ -1,6 +1,15 @@
+import InfoCard from "./info-card";
+
 function Riders() {
   return (
-    <div className="bg-gray-400 animate-pulse shadow-md h-80 xl:col-span-2 rounded-md"></div>
+    <div className="bg-background-custom xl:col-span-2 rounded-md">
+      <InfoCard
+        title="Riders"
+        // percentageInfo=""
+        // percentageDiff=""
+        value={1212}
+      />
+    </div>
   );
 }
 
