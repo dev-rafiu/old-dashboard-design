@@ -1,4 +1,4 @@
-import { LineChartComponent } from "../charts/line-chart";
+import { LineChartComponent } from "../../ui/dashboard/charts/line-chart";
 
 function CustomerSatisfaction() {
   return (

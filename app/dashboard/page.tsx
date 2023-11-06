@@ -1,15 +1,16 @@
-import ActiveUsers from "../ui/dashboard/courier/active-users";
-import AverageDeliveryTime from "../ui/dashboard/courier/average-delivery-time";
-import CompletedTrips from "../ui/dashboard/courier/completed-trips";
-import CustomerSatisfaction from "../ui/dashboard/courier/customer-satisfaction";
-import CustomersPerService from "../ui/dashboard/courier/customers-per-service";
-import InfoCard from "../ui/dashboard/courier/info-card";
-import NewRiders from "../ui/dashboard/courier/new-riders";
-import NewSignUp from "../ui/dashboard/courier/new-sign-up";
-import NewSignUps from "../ui/dashboard/courier/new-sign-ups";
-import Revenue from "../ui/dashboard/courier/revenue";
-import Riders from "../ui/dashboard/courier/riders";
-import UsersByRevenue from "../ui/dashboard/courier/users-by-revenue";
+import KPICard from "@/components/ui/kpi-card";
+import ActiveUsers from "./courier/active-users";
+import AverageDeliveryTime from "./courier/average-delivery-time";
+import CompletedTrips from "./courier/completed-trips";
+import CustomerSatisfaction from "./courier/customer-satisfaction";
+import CustomersPerService from "./courier/customers-per-service";
+import InfoCard from "./courier/info-card";
+import NewRiders from "./courier/new-riders";
+import NewSignUp from "./courier/new-sign-up";
+import NewSignUps from "./courier/new-sign-ups";
+import Revenue from "./courier/revenue";
+import Riders from "./courier/riders";
+import UsersByRevenue from "./courier/users-by-revenue";
 
 function Page() {
   return (
@@ -20,7 +21,7 @@ function Page() {
         <Riders />
       </div>
 
-      <div className="grid grid-cols-1 xl:grid-cols-5 gap-4">
+      {/* <div className="grid grid-cols-1 xl:grid-cols-5 gap-4">
         <InfoCard
           title="orders"
           percentageInfo="12% percent from yesterday"
@@ -50,6 +51,44 @@ function Page() {
           percentageInfo="12% percent from yesterday"
           percentageDiff="up"
           value={245}
+        />
+      </div> */}
+
+      <div className="grid grid-cols-1 xl:grid-cols-5 gap-4">
+        <KPICard
+          title="orders"
+          metric="$ 12,699"
+          deltaType="moderateIncrease"
+          delta="34.3%"
+          value={500}
+        />
+        <KPICard
+          title="completed trips"
+          metric="$ 12,699"
+          deltaType="moderateDecrease"
+          delta="10.3%"
+          value={1000}
+        />
+        <KPICard
+          title="total users"
+          metric="$ 12,699"
+          deltaType="moderateIncrease"
+          delta="25.3%"
+          value={800}
+        />
+        <KPICard
+          title="club members"
+          metric="$ 12,699"
+          deltaType="moderateIncrease"
+          delta="40.3%"
+          value={2000}
+        />
+        <KPICard
+          title="new user"
+          metric="$ 12,699"
+          deltaType="moderateDecrease"
+          delta="8.3%"
+          value={950}
         />
       </div>
 

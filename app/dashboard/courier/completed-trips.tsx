@@ -1,4 +1,4 @@
-import { BarChartComponent } from "../charts/barchat";
+import { BarChartComponent } from "../../ui/dashboard/charts/barchat";
 
 function CompletedTrips() {
   return (
