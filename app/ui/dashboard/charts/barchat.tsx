@@ -77,9 +77,10 @@ const chartdata3 = [
 type TBarchart = {
   title: string;
   info: string;
+  data?: any;
 };
 
-export const BarChartComponent = ({ title, info }: TBarchart) => {
+export const BarChartComponent = ({ title, info, data }: TBarchart) => {
   const [value, setValue] = useState(null);
 
   return (
@@ -104,10 +105,10 @@ export const BarChartComponent = ({ title, info }: TBarchart) => {
 
         <BarChart
           className="mt-6 w-full h-80"
-          data={chartdata3}
+          data={data ? data : chartdata3}
           index="date"
           categories={["2022", "2023"]}
-          colors={["orange", "yellow"]}
+          colors={["orange"]}
           yAxisWidth={30}
           showLegend={false}
           //   onValueChange={(v) => setValue(v)}
