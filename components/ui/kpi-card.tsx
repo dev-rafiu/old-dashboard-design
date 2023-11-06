@@ -59,7 +59,7 @@ function KPICard({ title, metric, deltaType, delta, value }: Props) {
     >
       <Card className="space-y-4">
         <Flex className="flex-row gap-2 items-end justify-between">
-          <Text className="capitalize text-base text-foreground-custom/80">
+          <Text className="capitalize text-base text-foreground-custom/80 self-start">
             {title}
           </Text>
 
