@@ -1,14 +1,51 @@
-import InfoCard from "./info-card";
+"use client";
+
+import { Card, DonutChart, Legend, Title } from "@tremor/react";
+
+const data = [
+  {
+    name: "Online",
+    sales: 9800,
+  },
+  {
+    name: "On Trip",
+    sales: 4567,
+  },
+  {
+    name: "Active",
+    sales: 3908,
+  },
+  {
+    name: "Inactive",
+    sales: 2400,
+  },
+];
 
 function Riders() {
   return (
     <div className="bg-background-custom xl:col-span-2 rounded-md">
-      <InfoCard
-        title="Riders"
-        // percentageInfo=""
-        // percentageDiff=""
-        value={1212}
-      />
+      <Card>
+        <Title>Riders</Title>
+
+        <div className=" flex flex-col items-center justify-center h-full">
+          <DonutChart
+            data={data}
+            category="sales"
+            variant="donut"
+            index="name"
+            label="1212 Total Riders"
+            showLabel={false}
+            // valueFormatter={valueFormatter}
+            colors={["orange", "amber", "blue", "cyan"]}
+            className="mt-6"
+          />
+          <Legend
+            categories={data.map((city) => city.name)}
+            colors={["orange", "amber", "blue", "cyan"]}
+            className="mt-6 gap-4 items-center text-sm justify-center flex-wrap"
+          />
+        </div>
+      </Card>
     </div>
   );
 }

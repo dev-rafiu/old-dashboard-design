@@ -88,3 +88,14 @@
     @apply bg-backgound-secondary-custom;
   }
 }
+
+.tremor-Legend-legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tremor-Legend-legendItem svg {
+  width: 0.9rem;
+  aspect-ratio: 1/1;
+}
