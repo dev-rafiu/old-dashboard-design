@@ -1,7 +1,11 @@
-function NewRiders() {
+import SmallBarChart from "@/components/ui/small-bar-chart";
+
+function CustomersPerService() {
   return (
-    <div className="bg-gray-400 animate-pulse h-80 shadow-md xl:col-span-2 rounded-md"></div>
+    <div className="bg-background-custom shadow-md xl:col-span-2 rounded-md">
+      <SmallBarChart />
+    </div>
   );
 }
 
-export default NewRiders;
+export default CustomersPerService;
