@@ -1,7 +1,15 @@
 import { Card, LineChart, Title } from "@tremor/react";
 import React from "react";
 
-const chartdata2 = [
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectValue,
+} from "@/components/ui/select";
+
+const data = [
   {
     date: "01",
     "2022": 0,
@@ -9,28 +17,28 @@ const chartdata2 = [
   },
   {
     date: "02",
-    "2022": 40,
-    "2023": 20,
+    "2022": 0,
+    "2023": 10,
   },
   {
     date: "03",
     "2022": 0,
-    "2023": 80,
+    "2023": 10,
   },
   {
     date: "04",
-    "2022": 60,
-    "2023": 30,
+    "2022": 0,
+    "2023": 10,
   },
   {
     date: "05",
     "2022": 0,
-    "2023": 58,
+    "2023": 10,
   },
   {
     date: "06",
-    "2022": 30,
-    "2023": 20,
+    "2022": 0,
+    "2023": 10,
   },
 ];
 
@@ -46,10 +54,27 @@ export const LineChartComponent = ({ title, lineType }: Props) => {
   return (
     <>
       <Card>
-        <Title>{title}</Title>
+        <header className="flex items-center justify-between">
+          <Title className="capitalize">{title}</Title>
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="2022" />
+            </SelectTrigger>
+            <SelectContent>
+              {data.map((item) => {
+                return (
+                  <SelectItem value={item.date} key={item.date}>
+                    {item.date}
+                  </SelectItem>
+                );
+              })}
+            </SelectContent>
+          </Select>
+        </header>
+
         <LineChart
           className="mt-6 w-full h-80"
-          data={chartdata2}
+          data={data}
           index="date"
           categories={["2022", "2023"]}
           colors={["neutral", "indigo"]}
@@ -59,7 +84,6 @@ export const LineChartComponent = ({ title, lineType }: Props) => {
           curveType={lineType == "monotone" ? "monotone" : "linear"}
         />
       </Card>
-      {/* <pre>{JSON.stringify(value)}</pre> */}
     </>
   );
 };

@@ -1,5 +1,12 @@
 "use client";
 
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+  SelectValue,
+} from "@/components/ui/select";
 import { Card, DonutChart, Legend, Title } from "@tremor/react";
 
 const data = [
@@ -25,7 +32,27 @@ function Riders() {
   return (
     <div className="bg-background-custom xl:col-span-2 rounded-md">
       <Card>
-        <Title>Riders</Title>
+        <header className="flex items-center justify-between">
+          <Title className="capitalize">riders</Title>
+
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Online" />
+            </SelectTrigger>
+            <SelectContent>
+              {data.map((item) => {
+                return (
+                  <SelectItem value={item.name} key={item.name}>
+                    {item.name}
+                  </SelectItem>
+                );
+              })}
+              {/* <SelectItem value="light">Yearly</SelectItem>
+              <SelectItem value="dark">Monthly</SelectItem>
+              <SelectItem value="system">Weekly</SelectItem> */}
+            </SelectContent>
+          </Select>
+        </header>
 
         <div className=" flex flex-col items-center justify-center h-full">
           <DonutChart
