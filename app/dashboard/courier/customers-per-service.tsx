@@ -96,8 +96,8 @@ function CustomersPerService() {
   return (
     <Card>
       <CardHeader className="flex-row gap-2 items-end justify-between p-4">
-        <CardTitle className="capitalize text-base self-start text-foreground-custom/80">
-          Customers Per Service
+        <CardTitle className="font-normal text-base text-foreground-custom/80">
+          Customers per Service
         </CardTitle>
 
         <Select>
