@@ -4,13 +4,12 @@ import AverageDeliveryTime from "./courier/average-delivery-time";
 import CompletedTrips from "./courier/completed-trips";
 import CustomerSatisfaction from "./courier/customer-satisfaction";
 import CustomersPerService from "./courier/customers-per-service";
-import InfoCard from "./courier/info-card";
 import NewRiders from "./courier/new-riders";
 import NewSignUp from "./courier/new-sign-up";
 import NewSignUps from "./courier/new-sign-ups";
 import Revenue from "./courier/revenue";
 import Riders from "./courier/riders";
-import UsersByRevenue from "./courier/users-by-revenue";
+import TotalUsersByRevenue from "./courier/total-users-by-revenue";
 
 function Page() {
   return (
@@ -93,7 +92,7 @@ function Page() {
       </div>
 
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
-        <UsersByRevenue />
+        <TotalUsersByRevenue />
         <AverageDeliveryTime />
       </div>
 

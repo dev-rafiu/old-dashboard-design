@@ -13,6 +13,14 @@ import {
 } from "recharts";
 // import { BarChartComponent } from "../charts/barchat";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 const chartData = [
   {
     date: "Shop Online",
@@ -91,11 +99,22 @@ function CustomersPerService() {
         <CardTitle className="capitalize text-base self-start text-foreground-custom/80">
           Customers Per Service
         </CardTitle>
+
+        <Select>
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Yearly" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="yearly">Yearly</SelectItem>
+            <SelectItem value="monthly">Monthly</SelectItem>
+            <SelectItem value="weekly">Weekly</SelectItem>
+          </SelectContent>
+        </Select>
       </CardHeader>
 
-      <CardContent>
-        <ResponsiveContainer className="w-full" height={300}>
-          <BarChart width={730} height={250} data={data}>
+      <CardContent className="p-3">
+        <ResponsiveContainer height={400}>
+          <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis dataKey="pv" />

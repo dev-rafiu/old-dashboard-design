@@ -81,9 +81,7 @@ function KPICard({ title, metric, deltaType, delta, value }: Props) {
           </Flex>
         </Flex>
 
-        <Text className="text-2xl font-semibold text-foreground-custom">
-          {value}
-        </Text>
+        <Text className="text-2xl text-foreground-custom">{value}</Text>
       </Card>
     </Grid>
   );

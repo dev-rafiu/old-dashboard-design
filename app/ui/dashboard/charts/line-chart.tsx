@@ -55,7 +55,9 @@ export const LineChartComponent = ({ title, lineType }: Props) => {
     <>
       <Card>
         <header className="flex items-center justify-between">
-          <Title className="capitalize">{title}</Title>
+          <Title className="capitalize text-foreground-custom/80">
+            {title}
+          </Title>
           <Select>
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="2022" />
@@ -73,7 +75,7 @@ export const LineChartComponent = ({ title, lineType }: Props) => {
         </header>
 
         <LineChart
-          className="mt-6 w-full h-80"
+          className="mt-6 w-full"
           data={data}
           index="date"
           categories={["2022", "2023"]}

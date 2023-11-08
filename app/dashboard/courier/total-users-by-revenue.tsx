@@ -2,19 +2,19 @@
 
 import { columns } from "@/components/ui/columns";
 import { DataTable } from "@/components/ui/data-table";
-import {
-  Table,
-  TableRow,
-  TableCell,
-  TableHead,
-  TableHeaderCell,
-  TableBody,
-  BadgeDelta,
-  Title,
-  MultiSelect,
-  MultiSelectItem,
-} from "@tremor/react";
-import Image from "next/image";
+
+// import {
+//   Table,
+//   TableRow,
+//   TableCell,
+//   TableHead,
+//   TableHeaderCell,
+//   TableBody,
+//   BadgeDelta,
+//   Title,
+//   MultiSelect,
+//   MultiSelectItem,
+// } from "@tremor/react";
 
 import {
   Card,
@@ -45,7 +45,7 @@ const USERS: User[] = [
     phoneNumber: "0293382380",
     region: "Greater Accra",
     amount: 20000,
-    services: "four",
+    services: "Four",
   },
   {
     id: 2,
@@ -54,7 +54,7 @@ const USERS: User[] = [
     phoneNumber: "0293382380",
     region: "Greater Accra",
     amount: 20000,
-    services: "four",
+    services: "Four",
   },
   {
     id: 3,
@@ -63,7 +63,7 @@ const USERS: User[] = [
     phoneNumber: "0293382380",
     region: "Ashanti Region",
     amount: 20000,
-    services: "three",
+    services: "Three",
   },
   {
     id: 4,
@@ -72,7 +72,7 @@ const USERS: User[] = [
     phoneNumber: "0293382380",
     region: "Central Region",
     amount: 20000,
-    services: "four",
+    services: "Four",
   },
   {
     id: 5,
@@ -81,11 +81,11 @@ const USERS: User[] = [
     phoneNumber: "0293382380",
     region: "Volta Region",
     amount: 20000,
-    services: "three",
+    services: "Three",
   },
 ];
 
-function UsersByRevenue() {
+function TotalUsersByRevenue() {
   const [selectedNames, setSelectedNames] = useState([]);
 
   // const isSalesPersonSelected = (user:User) =>
@@ -170,9 +170,9 @@ function UsersByRevenue() {
 
   return (
     <div className="bg-background-custom shadow-md rounded">
-      <Card>
+      <Card className="border-none shadow-none">
         <CardHeader>
-          <CardTitle className="text-base text-foreground-custom">
+          <CardTitle className="text-base text-foreground-custom/80 font-normal">
             Total Users By Revenue
           </CardTitle>
         </CardHeader>
@@ -184,4 +184,4 @@ function UsersByRevenue() {
   );
 }
 
-export default UsersByRevenue;
+export default TotalUsersByRevenue;

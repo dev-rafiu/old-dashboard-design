@@ -87,7 +87,9 @@ export const BarChartComponent = ({ title, info, data }: TBarchart) => {
     <>
       <Card>
         <header className="flex items-center justify-between">
-          <Title className="capitalize">{title}</Title>
+          <Title className="capitalize text-foreground-custom/80">
+            {title}
+          </Title>
 
           <Select>
             <SelectTrigger className="w-[180px]">
@@ -104,7 +106,7 @@ export const BarChartComponent = ({ title, info, data }: TBarchart) => {
         <p>{info}</p>
 
         <BarChart
-          className="mt-6 w-full h-80"
+          className="mt-6 h-[246px]"
           data={data ? data : chartdata3}
           index="date"
           categories={["2022", "2023"]}

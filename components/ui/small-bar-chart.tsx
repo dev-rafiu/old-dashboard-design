@@ -62,11 +62,11 @@ function SmallBarChart() {
     <Card>
       <header className="flex-row gap-2 items-end justify-between p-4">
         <Title className="capitalize text-base self-start text-foreground-custom/80">
-          New Riders
+          new riders
         </Title>
       </header>
 
-      <ResponsiveContainer className="w-full" height={300}>
+      <ResponsiveContainer className="" height={300}>
         <BarChart
           data={data}
           maxBarSize={10}

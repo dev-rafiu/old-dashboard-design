@@ -38,7 +38,7 @@ export function DataTable<TData, TValue>({
           <TableRow key={headerGroup.id} className="border-b-transparent">
             {headerGroup.headers.map((header) => {
               return (
-                <TableHead key={header.id}>
+                <TableHead key={header.id} className="p-0 border-b-2">
                   {header.isPlaceholder
                     ? null
                     : flexRender(
@@ -60,7 +60,7 @@ export function DataTable<TData, TValue>({
               className="border-0"
             >
               {row.getVisibleCells().map((cell) => (
-                <TableCell key={cell.id}>
+                <TableCell key={cell.id} className="p-2 pl-0">
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </TableCell>
               ))}

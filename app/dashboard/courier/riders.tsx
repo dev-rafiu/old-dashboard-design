@@ -33,7 +33,7 @@ function Riders() {
     <div className="bg-background-custom xl:col-span-2 rounded-md">
       <Card>
         <header className="flex items-center justify-between">
-          <Title className="capitalize">riders</Title>
+          <Title className="capitalize text-foreground-custom/80">riders</Title>
 
           <Select>
             <SelectTrigger className="w-[180px]">
@@ -47,14 +47,11 @@ function Riders() {
                   </SelectItem>
                 );
               })}
-              {/* <SelectItem value="light">Yearly</SelectItem>
-              <SelectItem value="dark">Monthly</SelectItem>
-              <SelectItem value="system">Weekly</SelectItem> */}
             </SelectContent>
           </Select>
         </header>
 
-        <div className=" flex flex-col items-center justify-center h-full">
+        <div className=" flex flex-col items-center justify-center">
           <DonutChart
             data={data}
             category="sales"
