@@ -114,7 +114,7 @@ function CustomersPerService() {
 
       <CardContent className="p-3">
         <ResponsiveContainer height={400}>
-          <BarChart data={data}>
+          <BarChart data={data} barSize={30}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis dataKey="pv" />
