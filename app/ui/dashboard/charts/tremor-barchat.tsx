@@ -80,7 +80,7 @@ type TBarchart = {
   data?: any;
 };
 
-export const BarChartComponent = ({ title, info, data }: TBarchart) => {
+export const TremorBarchart = ({ title, info, data }: TBarchart) => {
   const [value, setValue] = useState(null);
 
   return (
@@ -112,7 +112,7 @@ export const BarChartComponent = ({ title, info, data }: TBarchart) => {
           categories={["2022", "2023"]}
           colors={["orange"]}
           yAxisWidth={30}
-          showLegend={false}
+          // showLegend={false}
           //   onValueChange={(v) => setValue(v)}
         />
       </Card>

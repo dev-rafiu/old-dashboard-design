@@ -1,4 +1,4 @@
-import { BarChartComponent } from "@/app/ui/dashboard/charts/barchat";
+import { BarChartComponent } from "@/app/ui/dashboard/charts/tremor-barchat";
 import SmallBarChart from "@/components/ui/small-bar-chart";
 
 function NewSignUp() {

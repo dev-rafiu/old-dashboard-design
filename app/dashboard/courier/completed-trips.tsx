@@ -1,12 +1,9 @@
-import { BarChartComponent } from "../../ui/dashboard/charts/barchat";
+import { TremorBarchart } from "../../ui/dashboard/charts/tremor-barchat";
 
 function CompletedTrips() {
   return (
     <div className="bg-background-custom shadow-md xl:col-span-3 rounded-md">
-      <BarChartComponent
-        title="Completed Trips"
-        info="Jun is the busiest month"
-      />
+      <TremorBarchart title="Completed Trips" info="Jun is the busiest month" />
     </div>
   );
 }

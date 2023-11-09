@@ -1,5 +1,5 @@
 import RechartsBarchart from "@/components/ui/recharts-barchat";
-import { BarChartComponent } from "../../ui/dashboard/charts/barchat";
+import { BarChartComponent } from "../../ui/dashboard/charts/tremor-barchat";
 
 const data = [
   {
