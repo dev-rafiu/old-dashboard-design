@@ -1,5 +1,6 @@
+import { ChartJSVertical } from "@/components/ui/chartjs2-barchart";
 import RechartsBarchart from "@/components/ui/recharts-barchat";
-import { BarChartComponent } from "../../ui/dashboard/charts/tremor-barchat";
+// import { BarChartComponent } from "../../ui/dashboard/charts/tremor-barchat";
 
 const data = [
   {
@@ -80,7 +81,8 @@ function Revenue() {
   return (
     <div className="bg-background shadow-md lg:col-span-3 rounded-md">
       {/* <BarChartComponent title="revenue" info="2.1% vs last year" /> */}
-      <RechartsBarchart title="Revenue" data={data} />
+      {/* <RechartsBarchart title="Revenue" data={data} /> */}
+      <ChartJSVertical />
     </div>
   );
 }
