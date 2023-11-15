@@ -1,4 +1,4 @@
-import { LineChartComponent } from "../../ui/dashboard/charts/line-chart";
+import { LineChartComponent } from "../../../components/ui/line-chart";
 
 function AverageDeliveryTime() {
   return (

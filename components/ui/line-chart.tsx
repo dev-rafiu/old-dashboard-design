@@ -75,7 +75,7 @@ export const LineChartComponent = ({ title, lineType }: Props) => {
         </header>
 
         <LineChart
-          className="mt-6 w-full"
+          className="mt-6 w-full h-80"
           data={data}
           index="date"
           categories={["2022", "2023"]}
