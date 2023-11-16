@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import SideNav from "../ui/dashboard/sidenav";
+import Header from "@/components/ui/header";
 
 function Layout({ children }: { children: ReactNode }) {
   return (
@@ -7,7 +8,12 @@ function Layout({ children }: { children: ReactNode }) {
       <div className="w-full flex-none md:w-48">
         <SideNav />
       </div>
-      <div className="flex-grow p-4 md:overflow-y-auto">{children}</div>
+
+      <div className="flex-grow md:overflow-y-auto space-y-4">
+        <Header />
+
+        <div className="p-4 pt-0">{children}</div>
+      </div>
     </div>
   );
 }
